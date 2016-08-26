@@ -104,6 +104,7 @@ server.close();
   }
 }
 ```
+See Node.js [`tls.createServer` Documentation](https://nodejs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener) for more information on `tlsOptions` that can be passed through.
 
 ### License
 
