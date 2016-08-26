@@ -1,0 +1,41 @@
+{
+  "name": "simplehttps",
+  "version": "1.0.0",
+  "description": "Simple, low-config, HTTPS server with HTTP redirect for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://rossharper@github.com/rossharper/node-simplehttps.git"
+  },
+  "keywords": [
+    "node",
+    "https",
+    "http",
+    "redirect",
+    "simple"
+  ],
+  "author": "Ross Harper <ross@rossharper.net>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rossharper/node-simplehttps/issues"
+  },
+  "homepage": "https://github.com/rossharper/node-simplehttps#readme",
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "eslint-config-iplayer-es6": "^2.4.0",
+    "eslint-plugin-mocha": "^2.2.0",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5",
+    "supertest": "^2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "iplayer-es6"
+  },
+  "dependencies": {
+    "filehound": "^1.12.2",
+    "lodash": "^4.15.0"
+  }
+}
