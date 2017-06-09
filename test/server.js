@@ -323,6 +323,36 @@ describe('server', () => {
           done();
         });
     });
+
+    it('should redirect HTTP traffic to HTTPS server using specified ports', (done) => {
+      stubFsForDefaultCerts();
+
+      serverInstance = server.start(app, {
+        unsecuredServer: {
+          redirectsToSecuredServer: true,
+          enabled: true,
+          port: 7080,
+          redirectPort: 443
+        },
+        securedServer: {
+          port: 7443
+        }
+      });
+
+      sinon.assert.calledWith(https.createServer, sandbox.match(app));
+      sinon.assert.calledWith(mockHttpsServer.listen, sinon.match(7443));
+      sinon.assert.neverCalledWith(http.createServer, sandbox.match(app));
+      sinon.assert.called(http.createServer);
+
+      const request = supertest('http://localhost:7080');
+      request.get('/')
+        .expect(302)
+        .expect('Location', 'https://localhost/')
+        .end((err) => {
+          assert.ifError(err);
+          done();
+        });
+    });
   });
 
   describe('running HTTPS & HTTP servers in parallel', () => {
