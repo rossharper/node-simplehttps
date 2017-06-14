@@ -24,18 +24,18 @@
   },
   "homepage": "https://github.com/rossharper/node-simplehttps#readme",
   "devDependencies": {
-    "eslint": "^3.3.1",
-    "eslint-config-iplayer-es6": "^2.4.0",
-    "eslint-plugin-mocha": "^2.2.0",
-    "mocha": "^3.0.2",
-    "sinon": "^1.17.5",
-    "supertest": "^2.0.0"
+    "eslint": "3.7.0",
+    "eslint-config-iplayer-es6": "3.0.1",
+    "eslint-plugin-mocha": "4.5.1",
+    "mocha": "3.1.0",
+    "sinon": "1.17.6",
+    "supertest": "2.0.0"
   },
   "eslintConfig": {
     "extends": "iplayer-es6"
   },
   "dependencies": {
-    "filehound": "^1.12.2",
-    "lodash": "^4.15.0"
+    "filehound": "1.12.2",
+    "lodash": "4.15.0"
   }
 }
