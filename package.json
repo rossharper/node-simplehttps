@@ -33,6 +33,6 @@
   "eslintConfig": {},
   "dependencies": {
     "filehound": "^1.17.4",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   }
 }
